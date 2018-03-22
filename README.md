@@ -6,7 +6,9 @@
 npm start
 ```
 
-> Inside file package.json create proxy to your server-side application e.g.
+> Inside file create proxy to your server-side application e.g.
+
+**package.json**
 
 ```
 "proxy": "http://localhost:3001"
