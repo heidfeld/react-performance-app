@@ -14,9 +14,10 @@ export default class extends Component {
         this.setState({
             title: new Date().toLocaleTimeString()
         });
-        fetch('http://localhost:8080/rest/algorithm/external')
-            .then(response => response.text())
-            .then(text => this.props.changeText(text))
+        //fetch('http://localhost:8080/rest/algorithm/external')
+        fetch('/performance')
+            .then(response => response.json())
+            .then(text => this.props.changeText(text.toString()))
             .catch(error => console.error(error));
     }
 
