@@ -11,9 +11,6 @@ export default class extends Component {
     }
 
     onClick() {
-        this.setState({
-            title: new Date().toLocaleTimeString()
-        });
         fetch('/performance/algorithm/1')
             .then(response => response.json())
             .then(text => this.props.changeText(JSON.stringify(text)))
@@ -21,6 +18,6 @@ export default class extends Component {
     }
 
     render() {
-        return (<button onClick={this.onClick}>{this.state.title}</button>);
+        return (<button className="App-button" onClick={this.onClick}><span>{this.state.title}</span></button>);
     }
 };
