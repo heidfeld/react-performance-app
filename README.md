@@ -1,4 +1,4 @@
-Client React Application
+<b>Client React Application</b>
 
 Just clone repository and run from the root project directory
 
