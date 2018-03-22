@@ -5,7 +5,7 @@ export default class extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: 'jebac'
+            title: 'Run Algorithm'
         };
         this.onClick = this.onClick.bind(this);
     }
@@ -14,10 +14,9 @@ export default class extends Component {
         this.setState({
             title: new Date().toLocaleTimeString()
         });
-        //fetch('http://localhost:8080/rest/algorithm/external')
-        fetch('/performance')
+        fetch('/performance/algorithm/1')
             .then(response => response.json())
-            .then(text => this.props.changeText(text.toString()))
+            .then(text => this.props.changeText(JSON.stringify(text)))
             .catch(error => console.error(error));
     }
 
